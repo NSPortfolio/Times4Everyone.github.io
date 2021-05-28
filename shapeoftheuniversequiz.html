@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Times4Everyone</title>
+      <link rel='shortcut icon' href = "https://user-images.githubusercontent.com/76495035/103155046-bdfff480-4761-11eb-9990-b472321d7d50.png" type = "image/png">
+     <style>
+       body {
+         margin:0;
+       }
+       
+       .container {
+         position: relative;
+       }
+       
+       .text-block {
+         position: absolute;
+         top: 200px;
+         left: 50px;
+         right: 800px;
+         border-radius: 8px;
+         background-color: white;
+         padding: 20px;
+       }
+       
+       .text-block-article {
+         position:absolute; 
+         width:70%;
+         top:50%;
+         left:14%;
+         border: 5px solid #E8E8E8;
+         border-radius: 12px;
+         background-color: white;
+         padding: 10px;
+       }
+       
+      .nav{
+         overflow: hidden;
+         background-color: #87cefa;
+         font-family: georgia;
+       } 
+       
+       .nav a{
+         float:right;
+         color:black;
+         font-family:georgia;
+         padding: 20px 20px;
+         text-decoration:none;
+         font-size:24px;
+       }
+       
+       .nav a:hover {
+         background-color: #bde4fc;
+         color:black;
+         font-family:georgia;
+       }
+       
+      </style>
+      </head>
+      <body>
+        <div id  = "getstarted" class="nav">
+          <a href="fundraiser.html">Fundraiser</a>
+          <a href="getpublished.html">Get Published</a>
+          <a href="articles.html">Articles</a>
+          <a href="index.html">Home</a>
+        </div>
+        
+        
+        <div class="container">
+          <img src = "https://user-images.githubusercontent.com/76495035/120017169-28d08880-bfab-11eb-84f8-aadf256f33bb.png" style="width:100%;" height = 450;>
+        <div class="text-block">
+          <h1 style = "font-family:georgia;color:black;font-size:30px">Second Wave of Covid-19 Quiz</h1>
+          <a href = "shapeoftheuniverse.html" style = "border:none; color:white; padding:12px; font-family:georgia; text-decoration: none; font-size: 24px; background-color:#ff7f7f; border-radius: 12px; left: 150px;" text-align: "center"; class= "button">Back to Article</a><br><br><br>
+          <a href = "astronomy.html" style = "border:none; color:white; padding:8px; font-family:georgia; text-decoration: none; font-size: 18px; background-color:#87cefa; border-radius: 12px; left: 150px;" text-align: "center"; class= "button">Back to Astronomy Articles</a></div></div>
+      <br><br>
+				<div style = "width: 80%;border: 5px solid #E8E8E8;margin: auto;padding: 20px;background-color: white; border-radius: 12px;" id="main">
+
+			<form id = "form1" action = " ">
+				<h1 style = "font-family:georgia;color:black;font-size:25px;" >Question 1</h1>
+					<p style = "font-family:georgia;color:black;font-size:20px;">What does eradicated mean?</p>
+					<input type = "radio" name = "vocab" value = "25" /> Suppressed or Eliminated <br>
+					<input type = "radio" name = "vocab" value = "0" /> Returned <br>
+					<input type = "radio" name = "vocab" value = "0" /> Escalating <br>
+					<input type = "radio" name = "vocab" value = "0" /> Intensifying <br>
+				<h1 style = "font-family:georgia;color:black;font-size:20px;">Question 2</h1>
+					<p style = "font-family:georgia;color:black;font-size:20px;">Why is there a second wave?</p>
+					<input type = "radio" name = "why" value = "0" /> The virus mutated. <br>
+					<input type = "radio" name = "why" value = "0" /> There is no second wave. <br>
+					<input type = "radio" name = "why" value = "0" /> The virus returned to already hit areas.<br>
+					<input type = "radio" name = "why" value = "25" /> As public areas re-opened, new areas are being infected. <br>
+				<h1 style = "font-family:georgia;color:black;font-size:20px;">Question 3</h1>
+					<p style = "font-family:georgia;color:black;font-size:20px;">All countries have experienced the second wave except for...</p>
+					<input type = "radio" name = "countries" value = "0" /> Belgium <br>
+					<input type = "radio" name = "countries" value = "25" /> United States<br>
+					<input type = "radio" name = "countries" value = "0" /> Germany <br>
+					<input type = "radio" name = "countries" value = "0" /> The Netherlands<br>
+				<h1 style = "font-family:georgia;color:black;font-size:20px;">Question 4</h1>
+					<p style = "font-family:georgia;color:black;font-size:20px;">All were dicussed safety precautions except for...</p>
+					<input type = "radio" name = "safety" value = "0" /> Monitoring Your City's Outbreaks <br>
+					<input type = "radio" name = "safety" value = "0" /> Social Distancing<br>
+					<input type = "radio" name = "safety" value = "25" /> Not Staying Up to Date on Vaccinations <br>
+					<input type = "radio" name = "safety" value = "0" /> Staying Up to Date on Vaccinations  <br><br><br>
+
+				<input type = "submit" value = "Submit" style = "border:none; color:white; padding:20px; font-family:georgia; text-decoration: none; font-size: 24px; background-color:#87cefa; border-radius: 12px;">
+
+				<script>
+			document.getElementById("form1").onsubmit=function() {
+      		vocab = parseInt(document.querySelector('input[name = "vocab"]:checked').value);
+	   		why = parseInt(document.querySelector('input[name = "why"]:checked').value);
+	   		countries = parseInt(document.querySelector('input[name = "countries"]:checked').value);
+	   		safety = parseInt(document.querySelector('input[name = "safety"]:checked').value);
+	   
+	   
+	   		result = vocab + why + countries + safety;
+	   		document.getElementById("grade").innerHTML = result;
+
+	   		if (result == 0) {result2 = "Score:0% <br> Try Again!"};
+			if (result == 25) {result2 = "Score:25% <br> Try again!"};
+			if (result == 50) {result2 = "Score:50% <br> So close! Try again!"};
+			if (result == 75) {result2 = "Score:75% <br> So close! Try again!"};
+			if (result == 100) {result2 = "Score:100% <br> Excellent!"};
+			document.getElementById("grade2").innerHTML = result2; 
+
+			return false;
+
+		}
+
+
+	   			</script>
+
+
+				<p style = "font-size:24px;font-family:georgia;"><span id="grade">Score:</span></p>
+				<p id="grade2"></p></div>
+<h1 style = "background-color:#ff7f7f;font-family:georgia;color:white;text-align:center;padding:40px;font-size:16px">
+      © Copyright Times4Everyone. All Rights Reserved 
+	
+	    </body>
+	</html>
